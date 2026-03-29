@@ -195,6 +195,22 @@ body {
   margin-bottom: 1rem;
 }
 
+.hero-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.hero-social a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hero-social a:hover {
+  color: var(--accent2);
+}
+
 .available {
   color: var(--accent2);
   font-weight: 600;
@@ -771,6 +787,12 @@ body {
   .hero .cta .btn {
     flex: 1;
     min-width: 130px;
+  }
+
+  .hero-social {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
   }
 
   .stats {
