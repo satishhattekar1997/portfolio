@@ -332,11 +332,23 @@ body {
   margin: 0 auto;
 }
 
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
 .stats {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin: 3rem 0;
+  margin: 0;
   flex-wrap: wrap;
 }
 
@@ -661,49 +673,54 @@ body {
   }
 
   .hero {
-    padding: 2rem 1rem;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    padding: 2rem 0;
   }
 
   .hero-content {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .hero-text {
-    width: 100%;
+    max-width: 100%;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0 0 0.5rem;
+    word-wrap: break-word;
   }
 
   .hero-text h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0 0 1rem;
   }
 
+  .hero-text p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
   .hero-image {
-    width: 100%;
-    text-align: center;
+    justify-self: center;
   }
 
   .hero-image img {
-    max-width: 280px;
+    max-width: 250px;
     width: 100%;
   }
 
   .hero .cta {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .hero .cta .btn {
-    width: 100%;
+    flex: 1;
+    min-width: 140px;
   }
 
   .scroll-down {
@@ -711,7 +728,7 @@ body {
   }
 
   .container {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -723,8 +740,53 @@ body {
     font-size: 1.8rem;
   }
 
+  .section .container {
+    padding: 1.5rem;
+  }
+
   .section-subtitle {
     font-size: 1rem;
+  }
+
+  .stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .stat {
+    flex: 0 1 auto;
+    min-width: 80px;
+  }
+
+  .stat span {
+    font-size: 2.5rem;
+  }
+
+  .stat p {
+    font-size: 0.85rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-cta .btn {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
   }
 
   .skills-grid {
@@ -757,16 +819,11 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .stats {
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-
   .experience-item {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .education-item {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 }
