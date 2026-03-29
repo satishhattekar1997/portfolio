@@ -119,7 +119,7 @@ body {
 .hero-content {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: 1fr auto;
   gap: 3rem;
   width: min(1100px, 92%);
   margin: 0 auto;
@@ -645,6 +645,21 @@ body {
   margin: 0;
 }
 
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-image {
+    justify-self: center;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     position: static;
@@ -686,11 +701,14 @@ body {
 
   .hero-text {
     width: 100%;
+    max-width: 100%;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0 0 0.5rem;
+    word-break: break-word;
+    line-height: 1.3;
   }
 
   .hero-text h2 {
